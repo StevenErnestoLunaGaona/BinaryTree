@@ -1,20 +1,8 @@
 public class BinaryTree {
-
+    //Atributo
     private Node root;
 
-    public BinaryTree() {
-        root = null;
-    }
-
-    public void add(int data) {
-        Node newNode = new Node(data);
-        if (root == null) {
-            root = newNode;
-        } else {
-            add(newNode, root);
-        }
-    }
-
+    //Metodos
     private void add(Node newNode, Node currentNode) {
         if (newNode.data < currentNode.data) {
             if (currentNode.left == null) {
@@ -31,20 +19,12 @@ public class BinaryTree {
         }
     }
 
-    public void printPreorder() {
-        printPreorder(root);
-    }
-
     private void printPreorder(Node currentNode) {
         if (currentNode != null) {
             System.out.print(currentNode.data + " ");
             printPreorder(currentNode.left);
             printPreorder(currentNode.right);
         }
-    }
-
-    public void printInorder() {
-        printInorder(root);
     }
 
     private void printInorder(Node currentNode) {
@@ -55,15 +35,37 @@ public class BinaryTree {
         }
     }
 
-    public void printPostorder() {
-        printPostorder(root);
-    }
-
     private void printPostorder(Node currentNode) {
         if (currentNode != null) {
             printPostorder(currentNode.left);
             printPostorder(currentNode.right);
             System.out.print(currentNode.data + " ");
         }
+    }
+
+    //Constructores
+    public BinaryTree() {
+        root = null;
+    }
+
+    public void add(int data) {
+        Node newNode = new Node(data);
+        if (root == null) {
+            root = newNode;
+        } else {
+            add(newNode, root);
+        }
+    }
+
+    public void printPreorder() {
+        printPreorder(root);
+    }
+
+    public void printInorder() {
+        printInorder(root);
+    }
+
+    public void printPostorder() {
+        printPostorder(root);
     }
 }
