@@ -9,15 +9,17 @@ public class Main {
         tree.add(1);
         tree.add(6);
 
-        //Imprimir recorridos
+        //Imprimir recorrido Preorder
         System.out.println("Preorder: ");
         tree.printPreorder();
         System.out.println();
 
+        //Imprimir recorrido Inorder
         System.out.println("Inorder: ");
         tree.printInorder();
         System.out.println();
 
+        //Imprimir recorrido Postorder
         System.out.println("Postorder: ");
         tree.printPostorder();
         System.out.println();
