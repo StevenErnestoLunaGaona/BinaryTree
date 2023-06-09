@@ -2,7 +2,7 @@ public class Main {
     public static void main(String[] args) {
         //Aniadir elementos al arbol
         BinaryTree tree = new BinaryTree();
-        tree.add(5); //Root
+        tree.add(5); //Raiz
         tree.add(2);
         tree.add(7);
         tree.add(4);
